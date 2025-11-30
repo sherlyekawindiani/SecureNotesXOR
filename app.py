@@ -64,7 +64,7 @@ def create_note():
     conn.close()
 
     # Refresh list di UI supaya data langsung muncul
-    label_status.configure(text="CREATE berhasil ✅ (terenkripsi XOR Base64 & tersimpan)", text_color="green")
+    label_status.configure(text="CREATE berhasil (terenkripsi XOR Base64 & tersimpan)", text_color="green")
     read_notes()
 
     # Kosongkan form UI setelah create biar enak input note baru
@@ -166,7 +166,7 @@ def update_note():
     conn.close()
 
     # Refresh list dan kosongkan form UI biar UX sama kayak Create
-    label_status.configure(text="UPDATE berhasil ✅", text_color="green")
+    label_status.configure(text="UPDATE berhasil", text_color="green")
     read_notes()
     note_id.set("")
     entry_title.delete(0, "end")
@@ -186,7 +186,7 @@ def delete_note():
     conn.commit()
     conn.close()
 
-    label_status.configure(text="DELETE berhasil ✅", text_color="green")
+    label_status.configure(text="DELETE berhasil", text_color="green")
     read_notes()
     note_id.set("")
     entry_title.delete(0, "end")
